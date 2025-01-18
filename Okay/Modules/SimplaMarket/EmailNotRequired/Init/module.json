@@ -1,0 +1,11 @@
+{
+  "userName": "Сергій",
+  "userEmail": "kontekstrec@gmail.com",
+  "Okay": "4.5.1",
+  "version": "1.3.9",
+  "moduleName": "Необязательное поле Email в корзине",
+  "vendor": {
+    "email": "my@simplamarket.com",
+    "site": "https://simplamarket.com"
+  }
+}

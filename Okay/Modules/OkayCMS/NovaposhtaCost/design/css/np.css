@@ -1,0 +1,47 @@
+.novaposhta_div {
+    position: relative;
+}
+.np_preloader {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: url("../images/fn_loader.svg") center center no-repeat;
+    background-size: 100px;
+    position: absolute;
+}
+#delivery_novaposhta {
+    position: relative;
+}
+.term_novaposhta {
+    display: none;
+    padding: 5px 0;
+}
+.warehouses_novaposhta {
+    display: none;
+}
+.novaposhta_div select.error+label.error+.select2-container .select2-selection--single,
+.novaposhta_div select.error+.select2-container .select2-selection--single{
+    border-color: rgb(231, 71, 71);
+}
+.np_delivery_types_heading,
+.np_delivery_types_content {
+    margin-bottom: 1rem;
+}
+.np_delivery_types_heading a {
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 10px;
+    border: 1px solid transparent;
+}
+.np_delivery_types_heading a span {
+    border-bottom: 1px dashed;
+}
+.np_delivery_types_heading a.active {
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: 3px;
+}
+.np_delivery_types_heading a.active span {
+    border: none;
+}

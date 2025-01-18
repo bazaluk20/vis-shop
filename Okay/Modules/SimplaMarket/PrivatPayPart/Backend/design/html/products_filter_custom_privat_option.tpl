@@ -1,0 +1,2 @@
+<option value="{url keyword=null brand_id=null category_id=null page=null limit=null filter='individual_privat_value'}" {if $filter == 'individual_privat_value'}selected{/if}>{$btr->products_individual_privat_value|escape}</option>
+<option value="{url keyword=null brand_id=null category_id=null page=null limit=null filter='no_individual_privat_value'}" {if $filter == 'no_individual_privat_value'}selected{/if}>{$btr->products_no_individual_privat_value|escape}</option>

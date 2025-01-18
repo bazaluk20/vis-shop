@@ -1,0 +1,36 @@
+{
+  "userName": "Сергій",
+  "userEmail": "kontekstrec@gmail.com",
+  "Okay": "4.5.1",
+  "version": "1.0.9",
+  "moduleName": "Галочка в корзине \"Мне не нужно перезванивать\"",
+  "vendor": {
+    "email": "my@simplamarket.com",
+    "site": "https://simplamarket.com"
+  },
+  "modifications": {
+    "backend": [
+      {
+        "file": "orders.tpl",
+        "changes": [
+          {
+            "find": "{if $order->note}",
+            "appendAfter": "<div class=\"font_12 text_500 mb-q\"><span class=\"hidden-md-down\" style=\"color:red\">{if $order->do_not_call_back == 1}{$btr->do_not_callback_user}{/if}</span></div>"
+          }
+        ]
+      }
+    ],
+    "front": [
+      {
+        "file": "cart.tpl",
+        "changes": [
+          {
+            "find": "<textarea class=\"form__textarea",
+            "closestFind": "<div class=\"f_col-xl-12",
+            "appendAfter": "{do_not_call_back}"
+          }
+        ]
+      }
+    ]
+  }
+}

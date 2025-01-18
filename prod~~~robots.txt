@@ -1,0 +1,32 @@
+User-Agent: YadirectBot
+Disallow:
+
+User-Agent: YandexDirect
+Disallow:
+
+
+User-agent: *
+Allow: *.css
+Allow: *.js
+Disallow: /404
+Disallow: /backend/
+Disallow: /lang_general/
+Disallow: */order/
+Disallow: */user/
+Disallow: /captcha/
+Disallow: /Smarty/
+Disallow: /api/
+Disallow: /compiled/
+Disallow: /resize/
+Disallow: /js_libraries/
+Disallow: /*?currency_id
+Disallow: /*?keyword
+Disallow: /*?utm
+Disallow: /*&utm
+Disallow: /cart
+Disallow: /wishlist
+Disallow: /comparison
+Disallow: */price-*
+Disallow: /all-products
+
+Sitemap: https://vis-shop.com.ua/sitemap.xml

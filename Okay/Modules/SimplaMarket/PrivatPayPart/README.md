@@ -1,0 +1,2 @@
+В файле design/okay_shop/html/cart_deliveries.tpl внесены изменения, но по хорошему они должны быть в окае, поэтому 
+сделан костыль в файле Okay/Modules/SimplaMarket/PrivatPayPart/design/html/js_for_3.7.0.tpl. Когда нужная доработка появится в Okay, то этот функционал нужно будет убрать.

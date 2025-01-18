@@ -1,0 +1,26 @@
+{
+  "userName": "Сергій",
+  "userEmail": "kontekstrec@gmail.com",
+  "Okay": "4.3.1",
+  "version": "1.0.6",
+  "moduleName": "Расширенная аналитика Google Analytics 4 и FB Pixel",
+  "vendor": {
+    "email": "vitalisoft11@gmail.com",
+    "site": "https://okay-cms.com"
+  },
+  "modifications": {
+    "front": [
+      {
+        "file": "index.tpl",
+        "changes": [
+          {
+            "find": "{$block}",
+            "closestFind": "<div>",
+            "appendBefore": "{$block}",
+            "remove": ""
+          }
+        ]
+      }
+    ]
+  }
+}
