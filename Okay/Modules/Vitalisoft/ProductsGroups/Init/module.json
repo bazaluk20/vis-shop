@@ -1,0 +1,24 @@
+{
+  "userName": "Сергій",
+  "userEmail": "kontekstrec@gmail.com",
+  "Okay": "4.5.1",
+  "version": "1.0.13",
+  "moduleName": "Группировка товаров по свойствам",
+  "vendor": {
+    "email": "vitalisoft11@gmail.com",
+    "site": "https://okay-cms.com"
+  },
+  "modifications": {
+    "front": [
+      {
+        "file": "product.tpl",
+        "changes": [
+          {
+            "find": "details_boxed__item--one",
+            "appendAfter": "product_groups.tpl"
+          }
+        ]
+      }
+    ]
+  }
+}

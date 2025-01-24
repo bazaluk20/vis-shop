@@ -3221,7 +3221,7 @@ a.filter__catalog_link svg {
   opacity: 1;
   padding: 0 12px;
 }
-.product-page__button {
+.product-page__button, .vitalisoft__products_groups__value_button.vpg__current {
   background: var(--okay-button-color);
   color: var(--okay-button-text);
 }

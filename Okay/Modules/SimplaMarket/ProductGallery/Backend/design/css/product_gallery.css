@@ -1,0 +1,185 @@
+.file-manager-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.directory-editor__input {
+    background: #ffffff;
+    background: none;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    color: #2c2c2c;
+    outline: 0;
+    padding: 3px 12px;
+    line-height: normal;
+    font-size: 14px;
+    font-weight: normal;
+    vertical-align: middle;
+    min-height: 32px;
+    -webkit-transition: all 0.12s ease;
+    -o-transition: all 0.12s ease;
+    transition: all 0.12s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-transition: background 0.2s linear 0s;
+    -o-transition: background 0.2s linear 0s;
+    transition: background 0.2s linear 0s;
+    width: 250px;
+    position: relative;
+}
+
+.single-file__delete {
+    color: white;
+    background: #48b0f7;
+    padding: 5px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 0 5px 0 5px;
+}
+
+.single-file__delete:hover {
+    background: black;
+    cursor: pointer;
+}
+
+.single-file__text {
+    text-align: center;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.product-file-manager__head {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.product-file-manager {
+    width: 700px;
+    max-height: 700px;
+    min-height: 500px;
+}
+
+.files-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.single-file {
+    width: 25%;
+    height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.single-file__wrapper {
+    position: relative;
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.single-file__img-container {
+    padding: 5px;
+}
+
+.single-file__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-file__img {
+    max-height: 100px;
+}
+
+.single-file__folder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.single-file__folder-image {
+    width: 100px;
+}
+
+.single-file__img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.single-file__folder-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.single-file__in-product-label {
+    top: 0;
+    left: 0;
+    background: green;
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    padding: 1px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.file-manager-informer {
+    padding-bottom: 20px;
+    height: 40px;
+}
+
+.file-manager-informer__back {
+    float: right;
+    margin-right: 10px;
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+}

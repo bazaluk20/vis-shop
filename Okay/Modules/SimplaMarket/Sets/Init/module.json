@@ -1,0 +1,61 @@
+{
+  "userName": "Сергій",
+  "userEmail": "kontekstrec@gmail.com",
+  "Okay": "4.5.2",
+  "version": "1.7.3",
+  "moduleName": "Комплекты товаров",
+  "vendor": {
+    "email": "my@simplamarket.com",
+    "site": "https://simplamarket.com"
+  },
+  "modifications": {
+    "front": [
+      {
+        "file": "product.tpl",
+        "changes": [
+          {
+            "find": "<div class=\"fn_transfer f_row flex-column flex-lg-row align-items-lg-stretch\">",
+            "appendAfter": "{sets_in_product}"
+          }
+        ]
+      },
+      {
+        "file": "pop_up_cart.tpl",
+        "changes": [
+          {
+            "find": "<div class=\"block__popup_cart",
+            "appendAfter": "{sets_in_pop_up_cart}"
+          }
+        ]
+      },
+      {
+        "file": "order.tpl",
+        "changes": [
+          {
+            "find": "purchase__item d-flex align-items-start",
+            "childrenFind": "<div class=\"purchase__no_image d-flex align-items-start",
+            "html": "{if empty($purchase->sm_sets_set_id)}{include file=\"svg.tpl\" svgId=\"no_image\"}{/if}"
+          },
+          {
+            "find": "<div class=\"purchase__group\">",
+            "appendAfter": "{sets_in_order purchase=$purchase}"
+          }
+        ]
+      },
+      {
+        "file": "cart_purchases.tpl",
+        "changes": [
+          {
+            "find": "<div class=\"fn_purchases_wrap\" data-total_purchases_price=\"{$cart->total_price}\">",
+            "appendAfter": "{sets_in_cart}"
+          }
+        ]
+      }
+    ]
+  },
+  "name": "",
+  "description": "",
+  "minimumCoreVersion": "",
+  "title": "",
+  "author": ""
+}

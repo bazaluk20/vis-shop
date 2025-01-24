@@ -216,7 +216,7 @@ class Database
         $this->result->setFetchMode(ExtendedPdo::FETCH_OBJ);
         
         foreach ($this->result->fetchAll() as $row) {
-            if (property_exists($row, $mapped)) {
+            if (is_string($mapped) && property_exists($row, $mapped)) {
                 $mappedValue = $row->$mapped;
             } elseif (!empty($mapped)) {
                 throw new \Exception("Field named \"{$mapped}\" uses for mapped is not exists");
