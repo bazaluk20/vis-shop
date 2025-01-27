@@ -296,7 +296,7 @@
                 </div>
 
 
-                <div class="fn_accordion accordion details_boxed__item details_boxed__item--inner">
+                <!-- <div class="fn_accordion accordion details_boxed__item details_boxed__item--inner">
                     <div class="details_boxed__item">
                         {* Delivery *}
                         <div class="accordion__item visible">
@@ -329,7 +329,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 {* Share buttons *}
                 <div class="details_boxed__item details_boxed__share">
