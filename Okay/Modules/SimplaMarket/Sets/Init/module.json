@@ -14,8 +14,8 @@
         "file": "product.tpl",
         "changes": [
           {
-            "find": "<div class=\"fn_transfer f_row flex-column flex-lg-row align-items-lg-stretch\">",
-            "appendAfter": "{sets_in_product}"
+            "like": "[ |\"]for-dop-products[ |\"]",
+            "append": "{sets_in_product}"
           }
         ]
       },

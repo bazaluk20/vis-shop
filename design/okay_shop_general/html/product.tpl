@@ -46,8 +46,9 @@
 
     <div class="fn_transfer f_row flex-column flex-lg-row align-items-lg-stretch">
 
-        <div class="block product-page__gallery f_col f_col-lg-7 f_col-xl-7">
-            <div class="block--boxed block--border boxed--stretch">
+        <div class="block product-page__gallery f_col f_col-lg-7 f_col-xl-7 product-page__gallery__with_dop_prod">
+            <div class="block--boxed block--border">
+                <!-- class boxed--stretch -->
                 {if $product->images}
                     {* Main product image *}
                     <div class="gallery_image product-page__image {if $product->images|count == 1} product-page__image--full {/if} f_row justify-content-center">
@@ -121,8 +122,10 @@
                     </div>
                 {/if}
             </div>
-        </div>
 
+            <div class="block--boxed block--border for-dop-products hidden-mobile"></div>
+        </div>
+        
         <div class="block product-page__details f_col f_col-lg-5 f_col-xl-5">
             <div class="block--border boxed--stretch details_boxed">
                 <div class="details_boxed__item details_boxed__item--one hidden-mobile">
@@ -363,6 +366,8 @@
                         </div>
                     </div>
                 </div> -->
+
+                <div class="details_boxed__item for-dop-products hidden-desctop"></div>
 
                 {* Share buttons *}
                 <div class="details_boxed__item details_boxed__share">

@@ -2959,6 +2959,12 @@ a.filter__catalog_link svg {
   top: 0;
   left: 0;
 }
+.product-page__gallery__with_dop_prod {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
+}
 .details_boxed {
   background-color: rgb(255, 255, 255);
   overflow: hidden;
