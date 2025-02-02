@@ -1802,7 +1802,7 @@ a.filter__catalog_link svg {
   background-position: left bottom;
 }
 .rating_text {
-  vertical-align: middle;
+  /* vertical-align: middle;
   line-height: 18px;
   display: inline-block;
   position: absolute;
@@ -1812,7 +1812,12 @@ a.filter__catalog_link svg {
   color: rgb(102, 102, 102);
   white-space: nowrap;
   top: 1px;
-  z-index: 2;
+  z-index: 2; */
+}
+.rating_custom_text {
+  color: #484848;
+  font-size: 13px;
+  font-weight: 600;
 }
 .rating_text.hidden {
   display: none;
@@ -1885,7 +1890,16 @@ a.filter__catalog_link svg {
 }
 
 /***** #Preview product *************************************************************/
-
+.fn_product .banner_advantages__preview {
+  border: none;
+  box-shadow: none;
+}
+.fn_product .banner_advantages__item:hover .banner_advantages__preview {
+  box-shadow: none;
+}
+.fn_product .banner_advantages__title {
+  min-height: auto;
+}
 .boxed .product_item,
 .fn_products_slide .product_item {
   margin-bottom: 0;
@@ -1953,6 +1967,11 @@ a.filter__catalog_link svg {
   width: 80px;
   height: 80px;
 }
+.product-group--heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #484848;
+}
 .stickers_product-page,
 .stickers {
   display: -webkit-inline-box;
@@ -1992,7 +2011,7 @@ a.filter__catalog_link svg {
   color: rgb(255, 255, 255);
   font-size: 12px;
   font-weight: 500;
-  padding: 4px 2px;
+  padding: 4px 8px;
   /* margin-bottom: 5px; */
   border-radius: 3px;
   /* white-space: nowrap; */
@@ -2025,8 +2044,12 @@ a.filter__catalog_link svg {
   padding: 0;
   border-radius: 4px;
   margin-bottom: 8px;
-  width: 75px;
-  height: 40px;
+  width: 67px;
+  height: 67px;
+}
+.text--sticker {
+  width: auto;
+  height: auto;
 }
 /* .sticker--wrapper.sticker--wrapper-special {
   border: 1px solid #0003;
@@ -2037,8 +2060,8 @@ a.filter__catalog_link svg {
   left: auto;
 }
 .sticker--wrapper .paypart__wrapper, .sticker--wrapper .paypart__wrapper svg {
-  width: 73px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
 }
 .paypart__wrapper:hover {
   box-shadow: none !important;
@@ -2902,10 +2925,10 @@ a.filter__catalog_link svg {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 65px;
-  height: 65px !important;
-  border: 1px solid #eee;
-  border-radius: 3px;
+  width: 67px !important;
+  height: 67px !important;
+  border: 1px solid #0003;
+  border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
   margin-bottom: 10px;
@@ -2942,8 +2965,8 @@ a.filter__catalog_link svg {
 }
 .details_boxed__item {
   position: relative;
-  border-bottom: 3px solid #e9eaed;
-  padding: 15px;
+  border-bottom: 1px solid #D9D9D9CC;
+  padding: 30px 20px;
   background-color: #fff;
 }
 .details_boxed__item--one {
@@ -3162,6 +3185,7 @@ a.filter__catalog_link svg {
 }
 .fn_discount_wrapper {
   font-size: 11px;
+  color: #666666CC;
 }
 .fn_discount_wrapper b {
   color: #238523;
@@ -3311,15 +3335,15 @@ a.filter__catalog_link svg {
   text-decoration: none;
 } */
 .details_boxed__other {
-  border: 1px solid #0003;
+  border: 1px solid #0000001A;
   border-radius: 4px;
-  margin-top: 16px;
+  margin-top: 33px;
 }
 .details_boxed__other > a {
 transition: all 0.2s;
 text-decoration: none;
 flex-basis: calc(100%/3);
-border-right: 1px solid #0003;
+border-right: 1px solid #0000001A;
 border-radius: 0;
 font-size: 11px;
 color: #989C9A;
@@ -3349,14 +3373,14 @@ border: none;
 }
 .product-page__wishlist.selected,
 .product-page__compare.selected {
-  border-color: var(--okay-button-color);
+  /* border-color: var(--okay-button-color); */
   color: var(--okay-button-color);
 }
 .product-page__wishlist.selected i:before {
   content: "\f004";
 }
 .details_boxed__share {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 10px;
 }
 .share {
@@ -3371,11 +3395,11 @@ border: none;
   align-items: center; */
 }
 .share__text {
-  color: var(--okay-body-text);
-  font-size: 13px;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-right: 10px;
+    color: #484848;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 16px;
 }
 .share__icons .jssocials-share-logo {
   font-size: 26px;
@@ -3520,6 +3544,20 @@ border: none;
 .sidebar_card__no_image svg {
   width: 40px;
   height: 40px;
+}
+.tabs__navigation {
+  background-color: #f5f5f5;
+}
+.tabs__link {
+  padding: 10px 24px;
+  font-size: 18px;
+  border-right: 1px solid #D9D9D9;
+}
+.tabs__link:last-child {
+  border-right: none;
+}
+.tabs__link.selected {
+  background-color: #fff;
 }
 .sidebar_card__content {
   -webkit-box-flex: 0;

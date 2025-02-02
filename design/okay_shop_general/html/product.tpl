@@ -10,9 +10,42 @@
             <span data-language="product_sku">{$lang->product_sku}:</span>
             <span class="fn_sku sku_nubmer" {if $product->variant->sku}itemprop = "sku"{/if}>{$product->variant->sku|escape}</span>
         </div>
+
+        {* Product Rating *}
+        <div class="hidden-desctop">
+            <div class="details_boxed__rating">
+                <div id="product_{$product->id}" class="product__rating fn_rating" data-rating_post_url="{url_generator route='ajax_product_rating'}" {if $product->rating > 0} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"{/if}>
+                    {*Вывод количества голосов данного товара, скрыт ради микроразметки*}
+                    {if $product->rating > 0}
+                    <span class="rating_text hidden">( <span itemprop="reviewCount">{$product->votes|string_format:"%.0f"}</span> )</span>
+                    <span class="rating_text rating_custom_text"> <span itemprop="ratingValue">{$product->rating|string_format:"%.1f"}</span>/5</span>
+                    {*Вывод лучшей оценки товара для микроразметки*}
+                    <span class="rating_text hidden" itemprop="bestRating" style="display:none;">5</span>
+                    {else}
+                    <span class="rating_text hidden">({$product->rating|string_format:"%.1f"})</span>
+                    {/if}
+                    <span class="rating_starOff">
+                        <span class="rating_starOn" style="width:{$product->rating*90/5|string_format:'%.0f'}px;"></span>
+                    </span>
+                </div>
+            </div>
+            {* Anchor form comments *}
+            <div class="details_boxed__anchor_comments">
+                <a href="#comments" class="fn_anchor_comments d-inline-flex align-items-center anchor_comments__link">
+                    {if $comments|count}
+                        {$comments|count}
+                        {$comments|count|plural:$lang->product_anchor_comment_plural1:$lang->product_anchor_comment_plural2:$lang->product_anchor_comment_plural3}
+                    {else}
+                        <span data-language="product_anchor_comment">{$lang->product_anchor_comment}</span>
+                    {/if}
+                </a>
+            </div>
+        </div>  
+
     </div>
 
     <div class="fn_transfer f_row flex-column flex-lg-row align-items-lg-stretch">
+
         <div class="block product-page__gallery f_col f_col-lg-7 f_col-xl-7">
             <div class="block--boxed block--border boxed--stretch">
                 {if $product->images}
@@ -41,12 +74,12 @@
                         {if $product->featured || $product->special || $product->variant->compare_price}
                             <div class="stickers stickers_product-page">
                                 {if $product->featured}
-                                <span class="sticker--wrapper" data-language="product_sticker_hit">
+                                <span class="sticker--wrapper text--sticker" data-language="product_sticker_hit">
                                     <span class="sticker sticker--hit">{$lang->product_sticker_hit}</span>
                                 </span>
                                 {/if}
                                 {if $product->variant->compare_price}
-                                <span class="sticker--wrapper" data-language="product_sticker_discount">
+                                <span class="sticker--wrapper text--sticker" data-language="product_sticker_discount">
                                     <span class="sticker sticker--discount">{$lang->product_sticker_discount}</span>
                                 </span>
                                 {/if}
@@ -92,24 +125,24 @@
 
         <div class="block product-page__details f_col f_col-lg-5 f_col-xl-5">
             <div class="block--border boxed--stretch details_boxed">
-                <div class="details_boxed__item details_boxed__item--one">
+                <div class="details_boxed__item details_boxed__item--one hidden-mobile">
                     {* Product Rating *}
                     <div class="d-flex justify-content-between align-items-start">
                         <div class="details_boxed__rating">
 {*                            <div class="details_boxed__title" data-language="product_rating">{$lang->product_rating}:</div>*}
                             <div id="product_{$product->id}" class="product__rating fn_rating" data-rating_post_url="{url_generator route='ajax_product_rating'}" {if $product->rating > 0} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"{/if}>
-                                <span class="rating_starOff">
-                                    <span class="rating_starOn" style="width:{$product->rating*90/5|string_format:'%.0f'}px;"></span>
-                                </span>
                                 {*Вывод количества голосов данного товара, скрыт ради микроразметки*}
                                 {if $product->rating > 0}
-                                <span class="rating_text">( <span itemprop="reviewCount">{$product->votes|string_format:"%.0f"}</span> )</span>
-                                <span class="rating_text hidden">( <span itemprop="ratingValue">{$product->rating|string_format:"%.1f"}</span> )</span>
+                                <span class="rating_text hidden">( <span itemprop="reviewCount">{$product->votes|string_format:"%.0f"}</span> )</span>
+                                <span class="rating_text rating_custom_text"> <span itemprop="ratingValue">{$product->rating|string_format:"%.1f"}</span>/5</span>
                                 {*Вывод лучшей оценки товара для микроразметки*}
                                 <span class="rating_text hidden" itemprop="bestRating" style="display:none;">5</span>
                                 {else}
                                 <span class="rating_text hidden">({$product->rating|string_format:"%.1f"})</span>
                                 {/if}
+                                <span class="rating_starOff">
+                                    <span class="rating_starOn" style="width:{$product->rating*90/5|string_format:'%.0f'}px;"></span>
+                                </span>
                             </div>
                         </div>
                         {* Product brand *}

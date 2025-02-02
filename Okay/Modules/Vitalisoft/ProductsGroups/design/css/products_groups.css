@@ -1,10 +1,11 @@
 .vitalisoft__products_groups__value_button {
     display: inline-block;
     padding: 5px 8px;
-    font-weight: 400;
-    border: 1px solid #D4D4D4;
+    font-weight: 500;
+    font-size: 13px;
+    border: 1px solid #00000033;
     border-radius: 5px;
-    color: black;
+    color: #484848;
     text-decoration: none;
     cursor: pointer;
 }
@@ -13,7 +14,8 @@
     border: 2px solid;
     border-color: var(--okay-button-color);
     cursor: default;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .vitalisoft__products_groups__value_button.vpg__unavailable {

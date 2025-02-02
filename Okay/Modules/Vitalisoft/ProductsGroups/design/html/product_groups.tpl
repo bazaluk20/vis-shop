@@ -2,8 +2,10 @@
     <div class="details_boxed__item" style="display:flex; flex-direction:column; gap:25px">
         {foreach $vitalisoft__products_groups->features as $feature}
             <div style="display:flex; flex-direction:column; gap:10px">
-                {$feature->name}:
-                <div style="display:flex; flex-wrap:wrap; gap:5px">
+                <div class="product-group--heading">
+                    {$feature->name}:
+                </div>
+                <div style="display:flex; flex-wrap:wrap; gap:12px">
                     {foreach $feature->values as $value}
                         {strip}
                             {if $value->product_url && !$value->is_current}
