@@ -72,27 +72,25 @@
                                 <div class="swiper-pagination-gallery_image"></div>
                             {/if}
                         </div>
-                        {if $product->featured || $product->special || $product->variant->compare_price}
-                            <div class="stickers stickers_product-page">
-                                {if $product->featured}
-                                <span class="sticker--wrapper text--sticker" data-language="product_sticker_hit">
-                                    <span class="sticker sticker--hit">{$lang->product_sticker_hit}</span>
-                                </span>
-                                {/if}
-                                {if $product->variant->compare_price}
-                                <span class="sticker--wrapper text--sticker" data-language="product_sticker_discount">
-                                    <span class="sticker sticker--discount">{$lang->product_sticker_discount}</span>
-                                </span>
-                                {/if}
-                                {if $product->special}
-                                    <span class="sticker--wrapper sticker--wrapper-special">
-                                        <span class="sticker sticker--special">
-                                            <img class="sticker__image" src='files/special/{$product->special}' alt='{$product->special|escape}' title="{$product->special|escape}"/>
-                                        </span>
+                        <div class="stickers stickers_product-page">
+                            {if $product->featured}
+                            <span class="sticker--wrapper text--sticker" data-language="product_sticker_hit">
+                                <span class="sticker sticker--hit">{$lang->product_sticker_hit}</span>
+                            </span>
+                            {/if}
+                            {if $product->variant->compare_price}
+                            <span class="sticker--wrapper text--sticker" data-language="product_sticker_discount">
+                                <span class="sticker sticker--discount">{$lang->product_sticker_discount}</span>
+                            </span>
+                            {/if}
+                            {if $product->special}
+                                <span class="sticker--wrapper sticker--wrapper-special">
+                                    <span class="sticker sticker--special">
+                                        <img class="sticker__image" src='files/special/{$product->special}' alt='{$product->special|escape}' title="{$product->special|escape}"/>
                                     </span>
-                                {/if}
-                            </div>
-                        {/if}
+                                </span>
+                            {/if}
+                        </div>
                     </div>
                     {* Additional product images *}
                     {if $product->images|count > 1}
@@ -123,7 +121,7 @@
                 {/if}
             </div>
 
-            <div class="block--boxed block--border for-dop-products hidden-mobile"></div>
+            <div class="for-dop-products hidden-mobile"></div>
         </div>
         
         <div class="block product-page__details f_col f_col-lg-5 f_col-xl-5">

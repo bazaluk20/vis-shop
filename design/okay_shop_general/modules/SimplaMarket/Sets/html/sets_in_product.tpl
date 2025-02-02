@@ -1,5 +1,6 @@
 {if $sets}
-    <div class="product_sets block ">
+<div class="block--boxed block--border">
+    <div class="product_sets">
         <div class="product_sets__header">
             <h2 class="title title--basic">{$lang->simplamarket__sets__kit_cheaper}</h2>
         </div>
@@ -84,7 +85,7 @@
             <div class="swiper-button-prev product_set-prev"></div>
         </div>
     </div>
-
+</div>
 
 {/if}
 {literal}   
