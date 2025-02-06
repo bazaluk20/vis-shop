@@ -47,7 +47,7 @@
     <div class="fn_transfer f_row flex-column flex-lg-row align-items-lg-stretch">
 
         <div class="block product-page__gallery f_col f_col-lg-7 f_col-xl-7 product-page__gallery__with_dop_prod">
-            <div class="block--boxed block--border">
+            <div class="block--boxed block--border h-100">
                 <!-- class boxed--stretch -->
                 {if $product->images}
                     {* Main product image *}

@@ -1,5 +1,5 @@
 {if $sets}
-<div class="block--boxed block--border">
+<div class="block--boxed block--border mt-8">
     <div class="product_sets">
         <div class="product_sets__header">
             <h2 class="title title--basic">{$lang->simplamarket__sets__kit_cheaper}</h2>
