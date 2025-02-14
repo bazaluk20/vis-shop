@@ -1,0 +1,67 @@
+.products_advantages_block {
+	position: relative;
+	margin-bottom: 15px;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid #dbdbdb;
+}
+.products_advantages_title {
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 16px;
+	user-select: none;
+	padding: 15px;
+	color: #222;
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	border-bottom: 3px solid #e9eaed;
+}
+.products_advantages_l {
+	display: flex;
+	padding: 15px;
+	flex-direction: column;
+	align-items: center;
+	text-transform: uppercase;
+	width: 33%;
+}
+.products_advantages_img_block {
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.products_advantages_img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.products_advantages_txt_block {
+	padding-left: 15px;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-top: 15px;
+}
+.products_advantages_block_inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+@media (max-width: 768px) {
+	.products_advantages_l {
+		width: 50%;
+	}
+}
+@media (max-width: 576px) {
+	.products_advantages_txt_block {
+		font-size: 14px;
+	}
+}
+@media (max-width: 425px) {
+	.products_advantages_l {
+		width: 100%;
+	}
+}
