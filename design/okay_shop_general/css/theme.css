@@ -2060,8 +2060,8 @@ a.filter__catalog_link svg {
   left: auto;
 }
 .sticker--wrapper .paypart__wrapper, .sticker--wrapper .paypart__wrapper svg {
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
 }
 .paypart__wrapper:hover {
   box-shadow: none !important;
@@ -4432,6 +4432,12 @@ table.order_details {
   top: -3px;
   left: 0;
   text-align: center;
+}
+.block__description ul li, .block__description ol li {
+  font-weight: normal;
+}
+.tmce_notice_info, .tmce_notice_success, .tmce_notice_error {
+  font-weight: normal;
 }
 .order_payment__description {
   margin: 15px 0;
