@@ -4434,6 +4434,7 @@ table.order_details {
   text-align: center;
 }
 .block__description ul li, .block__description ol li {
+  line-height: normal !important;
   font-weight: normal;
 }
 .tmce_notice_info, .tmce_notice_success, .tmce_notice_error {
