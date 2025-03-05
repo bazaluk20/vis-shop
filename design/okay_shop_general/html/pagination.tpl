@@ -17,7 +17,9 @@
         {* Link to the previous page *}
         {if $current_page_num > 1}
             <li class="pagination__item">
-                <a class="pagination__link" href="{if $current_page_num == 2}{url page=null}{else}{url page=$current_page_num - 1}{/if}" aria-label="{$lang->pagination_prev}">
+                <a class="pagination__link"
+                    href="{if $current_page_num == 2}{url page=null}{else}{url page=$current_page_num - 1}{/if}"
+                    aria-label="{$lang->pagination_prev}">
                     <span>&laquo; {$lang->pagination_prev}</span>
                 </a>
             </li>
@@ -64,9 +66,11 @@
         {/if}
 
         {* Display all pages *}
+        {*
         <li class="pagination__item">
             <a class="pagination__link" href="{url page=all}" data-language="pagination_all">{$lang->pagination_all}</a>
         </li>
+        *}
 
         {* Link to the next page *}
         {if $current_page_num<$total_pages_num}

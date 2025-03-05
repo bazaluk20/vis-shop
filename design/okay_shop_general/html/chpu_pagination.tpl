@@ -17,7 +17,8 @@
         {* Link to the previous page *}
         {if $current_page_num > 1}
             <li class="pagination__item">
-                <a class="fn_sort_pagination_link pagination__link" href="{if $current_page_num == 2}{furl page=null}{else}{furl page=$current_page_num - 1}{/if}">
+                <a class="fn_sort_pagination_link pagination__link"
+                    href="{if $current_page_num == 2}{furl page=null}{else}{furl page=$current_page_num - 1}{/if}">
                     <span>&laquo; {$lang->pagination_prev}</span>
                 </a>
             </li>
@@ -64,9 +65,12 @@
         {/if}
 
         {* Display all pages *}
+        {*
         <li class="pagination__item">
-            <a class="fn_sort_pagination_link pagination__link" href="{furl page=all}" data-language="pagination_all">{$lang->pagination_all}</a>
+            <a class="fn_sort_pagination_link pagination__link" href="{furl page=all}"
+                data-language="pagination_all">{$lang->pagination_all}</a>
         </li>
+        *}
 
         {* Link to the next page *}
         {if $current_page_num < $total_pages_num}

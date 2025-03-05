@@ -11,6 +11,10 @@ RewriteEngine on
 RewriteRule .*(\.git/|\.idea|\.gitignore).* - [F]
 RewriteRule ^vendor/.* - [F]
 
+# redirect page-all to category
+RewriteBase /
+RewriteRule ^(.*)/page-all/?$ /$1 [R=301,L]
+
 # Редирект с повторяющихся слешей
 RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
 RewriteRule ^(.*)$ %1/%2 [R=301,L]

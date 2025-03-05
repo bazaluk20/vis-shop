@@ -21,7 +21,7 @@
     
     {$lang->privat_first_paid} {$privatPaymentData->value}&nbsp;{$all_currencies[$payment_method->currency_id]->sign}
     
-    <form method="post" action="{url_generator route='SimplaMarket_PrivatPayPart_create_payment'}">
+    <form method="post" action="{url_generator route='SimplaMarket_PrivatPayPart_create_payment' lang_id=1}">
         <input type="hidden" name="order_id" value="{$order_id|escape}">
         <input type="hidden" name="merchant_type" value="{$merchant_type|escape}">
         <input type="submit" class="button" value="{$lang->privat_pay_button|escape} &#8594;">

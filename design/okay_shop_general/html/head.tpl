@@ -47,6 +47,10 @@
         font-style: normal;
         }
     </style>
+    
+    <!--UniTalk call-tracking and website widgets-->
+    <script async src="https://api.unitalk.cloud/script/11396/2625"></script>
+    <!--UniTalk call-tracking and website widgets-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous">
@@ -119,13 +123,17 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
+    {*
     {if $noindex_nofollow}
         <meta name="robots" content="noindex,nofollow">
     {elseif $noindex_follow}
         <meta name="robots" content="noindex,follow">
     {else}
         <meta name="robots" content="index,follow">
-    {/if}
+    {/if} 
+    *}
+    
+    <meta name="robots" content="noindex,nofollow">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="OkayCMS {$config->version}">
