@@ -715,7 +715,7 @@ header {
 .main_banner {
   width: calc(100% - 285px);
   margin: 0 0 15px 285px;
-  height: 400px;
+  height: 400px !important;
   box-shadow: 0 2px 5px #0000004d;
 }
 .main_banner .banner_group__item {
@@ -2358,6 +2358,7 @@ a.filter__catalog_link svg {
   line-height: 1;
 }
 .details_boxed__other > a.fast_order_button span {
+  text-align: center;
   font-family: "Montserrat", arial, sans-serif;
 }
 .product_preview__buttons .comparison_button.selected {
@@ -2933,6 +2934,9 @@ a.filter__catalog_link svg {
   overflow: hidden;
   margin-bottom: 10px;
   transition: all 0.2s;
+}
+.swiper-slide-thumb-active {
+  background-color: rgba(0,0,0,.2);
 }
 .product-page__images-item picture {
   display: -webkit-box;

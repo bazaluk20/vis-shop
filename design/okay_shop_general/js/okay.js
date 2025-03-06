@@ -537,10 +537,10 @@ $(function () {
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 8,
         },
         992: {
-          slidesPerView: 5,
+          slidesPerView: 10,
         },
       },
     });
