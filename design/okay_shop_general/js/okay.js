@@ -540,7 +540,7 @@ $(function () {
           slidesPerView: 8,
         },
         992: {
-          slidesPerView: 10,
+          slidesPerView: 8,
         },
       },
     });
