@@ -343,4 +343,6 @@ $lang['user_browsed_title'] = 'Products viewed';
 $lang['general_messages_success'] = 'Saved successfully';
 $lang['order_success_text_not_callback'] = 'Thank you! Your order has been successfully placed. We will not call you back, please wait for the consignment note';
 $lang['product_discount_label'] = 'Ви заощадите';
-$lang['product_exchange_return_label'] = 'You can exchange or return the product within 14 days from the date of receipt, provided that it remains in its original condition and in good working order.\r\n';
+$lang['product_exchange_return_label'] = 'You can exchange or return the product within 14 days from the date of receipt, provided that it remains in its original condition and in good working order.\\r\\n';
+$lang['phone_type_1'] = 'Sale';
+$lang['phone_type_2'] = 'Service';

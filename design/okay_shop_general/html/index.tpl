@@ -80,7 +80,15 @@
                                                 <a class="d-flex align-items-center header-contact__section"
                                                     href="tel:{preg_replace('~[^0-9\+]~', '', $phone)}">
                                                     {include file="svg.tpl" svgId="phone_icon"}
-                                                    <span>{$phone}</span>
+                                                    <span>
+                                                        {if $phone@first}
+                                                            {$lang->phone_type_1}
+                                                        {else}
+                                                            {$lang->phone_type_2}
+                                                        {/if}
+                                                        <br>
+                                                        {$phone}
+                                                    </span>
                                                 </a>
                                             </div>
                                         {/foreach}

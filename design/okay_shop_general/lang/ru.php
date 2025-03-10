@@ -344,3 +344,5 @@ $lang['general_messages_success'] = 'Успешно сохранено';
 $lang['order_success_text_not_callback'] = 'Спасибо! Ваш заказ успешно оформлен. Мы не будем вам перезванивать, ожидайте ТТН ';
 $lang['product_discount_label'] = 'Вы экономите';
 $lang['product_exchange_return_label'] = 'Вы можете обменять или вернуть товар в течение 14 дней с момента получения при условии сохранения его товарного вида и исправного состояния.';
+$lang['phone_type_1'] = 'Продажа';
+$lang['phone_type_2'] = 'Сервис';
