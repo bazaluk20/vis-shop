@@ -72,11 +72,10 @@
                             {* header contacts *}
                             <div class="header-contact">
                                 <div
-                                    class="header-contact__inner {if !$settings->site_phones && !$settings->site_email} header-contact__inner--adress{/if}">
+                                    class="header-contact__inner  {if !$settings->site_phones && !$settings->site_email} header-contact__inner--adress{/if}">
                                     {if $settings->site_phones}
                                         {foreach $settings->site_phones as $phone}
-                                            <div
-                                                class="header-contact__item header-contact--phone{if $phone@first} header-contact__item--visible{/if}">
+                                            <div class="header-contact__item header-contact--phone header-contact__item--visible">
                                                 <a class="d-flex align-items-center header-contact__section"
                                                     href="tel:{preg_replace('~[^0-9\+]~', '', $phone)}">
                                                     {include file="svg.tpl" svgId="phone_icon"}

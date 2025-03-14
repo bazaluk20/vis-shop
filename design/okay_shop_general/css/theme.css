@@ -211,11 +211,11 @@ header {
   min-width: 225px;
 }
 .header-contact__inner {
-  padding: 15px 15px 0;
+  padding: 4px 15px 0;
   position: absolute;
   right: 0;
   left: 0;
-  top: 0;
+  top: -12px;
   cursor: pointer;
   border-radius: 4px;
   height: 45px;
@@ -264,6 +264,10 @@ header {
   margin-bottom: 13px;
   line-height: 1.2;
   word-break: break-all;
+}
+.header-contact--phone {
+  font-size: 13px;
+  margin-bottom: 4px;
 }
 .header-contact--email {
   font-size: 14px;
