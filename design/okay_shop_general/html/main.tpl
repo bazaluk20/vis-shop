@@ -1,5 +1,7 @@
 <!-- The main page template -->
 
+{$banner_shortcode_hero}
+
 {* Featured products *}
 {get_featured_products var=featured_products limit=5}
 {if $featured_products}
@@ -10,8 +12,10 @@
                     <span data-language="main_recommended_products">{$lang->main_recommended_products}</span>
                 </div>
                 <div class="block__header_button">
-                    <a class="block__more d-flex align-items-center" href="{url_generator route='products' filtersUrl=['filter' => ['featured']]}">
-                        <span data-language="main_look_all">{$lang->main_look_all}</span>{include file="svg.tpl" svgId="arrow_right2"}
+                    <a class="block__more d-flex align-items-center"
+                        href="{url_generator route='products' filtersUrl=['filter' => ['featured']]}">
+                        <span
+                            data-language="main_look_all">{$lang->main_look_all}</span>{include file="svg.tpl" svgId="arrow_right2"}
                     </a>
                 </div>
             </div>
@@ -21,7 +25,7 @@
                         {foreach $featured_products as $product}
                             <div class="item product_item swiper-slide no_hover">{include "product_list.tpl"}</div>
                         {/foreach}
-                    </div> 
+                    </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
@@ -49,7 +53,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-         </div>
+        </div>
     </div>
 {/if}
 
@@ -63,8 +67,10 @@
                     <span data-language="main_discount_products">{$lang->main_discount_products}</span>
                 </div>
                 <div class="block__header_button">
-                    <a class="block__more d-flex align-items-center" href="{url_generator route='products' filtersUrl=['filter' => ['discounted']]}">
-                        <span data-language="main_look_all">{$lang->main_look_all} </span>{include file="svg.tpl" svgId="arrow_right2"}
+                    <a class="block__more d-flex align-items-center"
+                        href="{url_generator route='products' filtersUrl=['filter' => ['discounted']]}">
+                        <span data-language="main_look_all">{$lang->main_look_all}
+                        </span>{include file="svg.tpl" svgId="arrow_right2"}
                     </a>
                 </div>
             </div>
@@ -109,32 +115,40 @@
                                 <div class="block__title"><span data-language="main_brands">{$lang->main_brands}</span></div>
                                 <div class="block__header_button">
                                     <a class="block__more d-flex align-items-center" href="{url_generator route='brands'}">
-                                        <span data-language="main_look_all">{$lang->main_look_all} </span>{include file="svg.tpl" svgId="arrow_right2"}
+                                        <span data-language="main_look_all">{$lang->main_look_all}
+                                        </span>{include file="svg.tpl" svgId="arrow_right2"}
                                     </a>
                                 </div>
                             </div>
                             <div class="block__body">
                                 <div class="main_brands f_row no_gutters">
                                     {foreach $all_brands as $b}
-                                    <div class="main_brands__item f_col-4 f_col-md-2 f_col-lg-4 f_col-xl-4">
-                                        <a class="d-flex align-items-center justify-content-center main_brands__link" aria-label="{$b->name|escape}" href="{url_generator route='brand' url=$b->url}" data-brand="{$b->id}">
-                                            {if $b->image}
-                                                <div class="d-flex align-items-center justify-content-center main_brands__image">
-                                                    <picture>
-                                                        {if $settings->support_webp}
-                                                            <source type="image/webp" data-srcset="{$b->image|resize:100:50:false:$config->resized_brands_dir|webp}">
-                                                        {/if}
-                                                        <source data-srcset="{$b->image|resize:100:50:false:$config->resized_brands_dir}">
-                                                        <img class="main_brands_img lazy" data-src="{$b->image|resize:100:50:false:$config->resized_brands_dir}" src="{$rootUrl}/design/{get_theme}/images/xloading.gif" alt="{$b->name|escape}" title="{$b->name|escape}"/>
-                                                    </picture>
-                                                </div>
-                                            {else}
-                                                <div class="d-flex align-items-center justify-content-center main_brands__name">
-                                                    <span>{$b->name|escape}</span>
-                                                </div>
-                                            {/if}
-                                        </a>
-                                    </div>
+                                        <div class="main_brands__item f_col-4 f_col-md-2 f_col-lg-4 f_col-xl-4">
+                                            <a class="d-flex align-items-center justify-content-center main_brands__link"
+                                                aria-label="{$b->name|escape}" href="{url_generator route='brand' url=$b->url}"
+                                                data-brand="{$b->id}">
+                                                {if $b->image}
+                                                    <div class="d-flex align-items-center justify-content-center main_brands__image">
+                                                        <picture>
+                                                            {if $settings->support_webp}
+                                                                <source type="image/webp"
+                                                                    data-srcset="{$b->image|resize:100:50:false:$config->resized_brands_dir|webp}">
+                                                            {/if}
+                                                            <source
+                                                                data-srcset="{$b->image|resize:100:50:false:$config->resized_brands_dir}">
+                                                            <img class="main_brands_img lazy"
+                                                                data-src="{$b->image|resize:100:50:false:$config->resized_brands_dir}"
+                                                                src="{$rootUrl}/design/{get_theme}/images/xloading.gif"
+                                                                alt="{$b->name|escape}" title="{$b->name|escape}" />
+                                                        </picture>
+                                                    </div>
+                                                {else}
+                                                    <div class="d-flex align-items-center justify-content-center main_brands__name">
+                                                        <span>{$b->name|escape}</span>
+                                                    </div>
+                                                {/if}
+                                            </a>
+                                        </div>
                                     {/foreach}
                                 </div>
                             </div>
@@ -156,8 +170,10 @@
                     <span data-language="main_news">{$lang->main_news}</span>
                 </div>
                 <div class="block__header_button">
-                    <a class="block__more d-flex align-items-center" href="{url_generator route='blog_category' url=$blog_categories[1]->url}">
-                        <span data-language="main_all_news">{$lang->main_all_news} </span>{include file="svg.tpl" svgId="arrow_right2"}
+                    <a class="block__more d-flex align-items-center"
+                        href="{url_generator route='blog_category' url=$blog_categories[1]->url}">
+                        <span data-language="main_all_news">{$lang->main_all_news}
+                        </span>{include file="svg.tpl" svgId="arrow_right2"}
                     </a>
                 </div>
             </div>
@@ -167,7 +183,7 @@
                         <div class="article_item no_hover f_col-sm-6 f_col-lg-3">{include 'post_list.tpl'}</div>
                     {/foreach}
                 </div>
-            </div>   
+            </div>
         </div>
     </div>
 {/if}

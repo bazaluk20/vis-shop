@@ -32,7 +32,7 @@
         "file": "product_list.tpl",
         "changes": [
           {
-            "find": "class=\"fn_wishlist",
+            "find": "class=\"anker_for_privat_icon",
             "appendAfter": "{private_paypart_block type='list' prod=$product}"
           }
         ]

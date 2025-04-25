@@ -11,7 +11,8 @@
             {if $category}
                 <div class="sidebar__header--reset">
                     <form method="post">
-                        <button type="submit" name="prg_seo_hide" class="fn_filter_reset mobile_filter__reset" value="{url_generator route="category" url=$category->url absolute=1}">
+                        <button type="submit" name="prg_seo_hide" class="fn_filter_reset mobile_filter__reset"
+                            value="{url_generator route="category" url=$category->url absolute=1}">
                             {include file="svg.tpl" svgId="reset_icon"}
                             <span>{$lang->mobile_filter_reset}</span>
                         </button>
@@ -20,7 +21,8 @@
             {elseif $brand}
                 <div class="sidebar__header--reset">
                     <form method="post">
-                        <button type="submit" name="prg_seo_hide" class="fn_filter_reset mobile_filter__reset" value="{url_generator route="brand" url=$brand->url absolute=1}">
+                        <button type="submit" name="prg_seo_hide" class="fn_filter_reset mobile_filter__reset"
+                            value="{url_generator route="brand" url=$brand->url absolute=1}">
                             {include file="svg.tpl" svgId="reset_icon"}
                             <span>{$lang->mobile_filter_reset}</span>
                         </button>
@@ -55,8 +57,16 @@
     </div>
 
     <div class="products_container d-flex flex-column">
+
+        {if !empty($global_banners)}
+            <div class="{if $controller == 'MainController'}d-flex main_banner{/if}">
+                {$global_banners}
+            </div>
+        {/if}
+
         <div class="products_container__boxed">
-            <h1 class="h1"{if $category} data-category="{$category->id}"{/if}{if $brand} data-brand="{$brand->id}"{/if}>{$h1|escape}</h1>
+            <h1 class="h1" {if $category} data-category="{$category->id}" {/if}{if $brand} data-brand="{$brand->id}"
+                {/if}>{$h1|escape}</h1>
 
             {if !empty($annotation)}
                 <div class="boxed boxed--big">
@@ -105,7 +115,8 @@
                             <ol>
                                 {foreach $table_of_content as $content_item}
                                     <li style="margin-left: {$content_item.header_level*15-15}px">
-                                        <a class="fn_ancor_post" href="{$content_item.url|escape}">{$content_item.anchor_text|escape}</a>
+                                        <a class="fn_ancor_post"
+                                            href="{$content_item.url|escape}">{$content_item.anchor_text|escape}</a>
                                     </li>
                                 {/foreach}
                             </ol>

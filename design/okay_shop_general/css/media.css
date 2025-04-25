@@ -766,6 +766,9 @@
   
 }
 @media only screen and (max-width: 767px) {
+  .product_sort__form .sorting_icon {
+    display: none;
+  }
   .sticker {
     font-size: 11px;
     padding: 2px 6px;

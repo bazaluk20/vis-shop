@@ -148,7 +148,15 @@
         <ul>
             <li>
                 <a class="phone icon icon-phone-callback" href="tel:{preg_replace('~[^0-9\+]~', '', $phone)}">
-                    <span>{$phone}</span>
+                    <span>
+                        {if $phone@first}
+                            {$lang->phone_type_1}
+                        {else}
+                            {$lang->phone_type_2}
+                        {/if}
+                        <br>
+                        {$phone}
+                    </span>
                 </a>
             </li>
         </ul>

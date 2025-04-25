@@ -182,12 +182,14 @@
     {* Тело сайта *}
     <div class="main">
         {* Include module banner *}
-        {if !empty($global_banners)}
-            <div class="container">
-                <div class="{if $controller == 'MainController'}d-flex main_banner{/if}">
-                    {$global_banners}
+        {if $controller == 'MainController'}
+            {if !empty($global_banners)}
+                <div class="container">
+                    <div class="{if $controller == 'MainController'}d-flex main_banner{/if}">
+                        {$global_banners}
+                    </div>
                 </div>
-            </div>
+            {/if}
         {/if}
 
         {* Контент сайта *}

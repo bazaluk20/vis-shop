@@ -149,7 +149,7 @@ class ProductsHelper implements GetListInterface
         foreach ($products as $p) {
             ProductRoute::setUrlSlugAlias($p->url, $p->slug_url);
         }
-        
+
         return ExtenderFacade::execute(__METHOD__, $products, func_get_args());
     }
 
@@ -163,7 +163,7 @@ class ProductsHelper implements GetListInterface
         ];
         return ExtenderFacade::execute(__METHOD__, $excludedFields, func_get_args());
     }
-    
+
     // Данный метод остаётся для обратной совместимости, но объявлен как deprecated, и будет удалён в будущих версиях
     public function getProductList($filter = [], $sortProducts = null)
     {
@@ -179,7 +179,7 @@ class ProductsHelper implements GetListInterface
         if ($this->settings->get('missing_products') === MISSING_PRODUCTS_MOVE_END) {
             $orderAdditionalData['in_stock_first'] = true;
         }
-        
+
         return ExtenderFacade::execute(__METHOD__, $orderAdditionalData, func_get_args());
     }
 
@@ -191,7 +191,7 @@ class ProductsHelper implements GetListInterface
         $productsIds = array_keys($copyProducts);
 
         $variantsFilter['product_id'] = $productsIds;
-        
+
         /** @var VariantsEntity $variantsEntity */
         $variantsEntity = $this->entityFactory->get(VariantsEntity::class);
         $variants = $variantsEntity->order('in_stock_first')->find($variantsFilter);
@@ -223,20 +223,20 @@ class ProductsHelper implements GetListInterface
     {
         /** @var FeaturesValuesEntity $featuresValuesEntity */
         $featuresValuesEntity = $this->entityFactory->get(FeaturesValuesEntity::class);
-        
+
         /** @var FeaturesEntity $featuresEntity */
         $featuresEntity = $this->entityFactory->get(FeaturesEntity::class);
-        
+
         $productsIds = array_keys($products);
 
         $featuresValuesFilter['product_id'] = $productsIds;
         $featuresValues = [];
         $features = [];
-        
+
         if (isset($featuresFilter['id'])) {
             $featuresValuesFilter['feature_id'] = $featuresFilter['id'];
         }
-        
+
         foreach ($featuresValuesEntity->find($featuresValuesFilter) as $fv) {
             $featuresValues[$fv->feature_id][$fv->id] = $fv;
         }
@@ -259,7 +259,7 @@ class ProductsHelper implements GetListInterface
         foreach ($featuresValuesEntity->getProductValuesIds($productsIds) as $productValueId) {
             $productsValuesIds[$productValueId->value_id][] = $productValueId->product_id;
         }
-        
+
         foreach ($features as $feature) {
             if (isset($featuresValues[$feature->id])) {
                 foreach ($featuresValues[$feature->id] as $featureValue) {
@@ -324,7 +324,7 @@ class ProductsHelper implements GetListInterface
         $imagesEntity = $this->entityFactory->get(ImagesEntity::class);
 
         $productsIds = array_keys($copyProducts);
-        
+
         if (empty($productsIds)) {
             return ExtenderFacade::execute(__METHOD__, $copyProducts, func_get_args());
         }

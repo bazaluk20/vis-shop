@@ -26,7 +26,7 @@ class ProductsController extends AbstractController
         AllProductsMetadataHelper $allProductsMetadataHelper,
         CanonicalHelper           $canonicalHelper,
         MetaRobotsHelper          $metaRobotsHelper,
-                                  $filtersUrl = ''
+        $filtersUrl = ''
     ) {
         $this->design->assign('filtersUrl', !empty($filtersUrl) ? $filtersUrl : '', true);
         $this->design->assign('ajax_filter_route', 'products_features', true);
@@ -55,7 +55,8 @@ class ProductsController extends AbstractController
         $metaArray = $filterHelper->getMetaArray($filtersUrl);
 
         // Если в строке есть параметры которые не должны быть в фильтре, либо параметры с другой категории, бросаем 404
-        if (!empty($metaArray['features_values'])
+        if (
+            !empty($metaArray['features_values'])
             && array_intersect_key($metaArray['features_values'], $catalogFeatures) !== $metaArray['features_values']
         ) {
             return false;
@@ -64,7 +65,7 @@ class ProductsController extends AbstractController
         $isFilterPage = $productsHelper->isFilterPage($productsFilter);
         $this->design->assign('is_filter_page', $isFilterPage);
 
-        if (!$this->settings->get('deferred_load_features') || $this->request->get('ajax','boolean')) {
+        if (!$this->settings->get('deferred_load_features') || $this->request->get('ajax', 'boolean')) {
             $productsHelper->assignFilterProcedure(
                 $productsFilter,
                 $catalogFeatures
@@ -90,7 +91,7 @@ class ProductsController extends AbstractController
 
             $metaRobotsHelper->setAvailableFeatures($catalogFeatures);
         }
-        
+
         if (!$catalogHelper->paginate(
             $this->settings->get('products_num'),
             $currentPage,
@@ -102,7 +103,7 @@ class ProductsController extends AbstractController
 
         // Товары
         $products = $productsHelper->getList($productsFilter, $productsSort);
-        
+
         // Если нашелся только один товар, перенаправим сразу на него
         if (!empty($productsFilter['keyword']) && count($products) == 1) {
             $product = reset($products);
@@ -110,10 +111,10 @@ class ProductsController extends AbstractController
                 'url' => $product->url,
             ], true));
         }
-        
+
         $this->design->assign('products', $products);
 
-        if ($this->request->get('ajax','boolean')) {
+        if ($this->request->get('ajax', 'boolean')) {
             $this->design->assign('ajax', 1);
             $result = $catalogHelper->getAjaxFilterData();
             $this->response->setContent(json_encode($result), RESPONSE_JSON);
@@ -137,8 +138,8 @@ class ProductsController extends AbstractController
             $currentPage,
             $productsFilter['other_filter'] ?? [],
             $metaArray['features_values'] ?? [],
-            $productsFilter['brand_id'] ?? [])
-        ) {
+            $productsFilter['brand_id'] ?? []
+        )) {
             case ROBOTS_NOINDEX_FOLLOW:
                 $this->design->assign('noindex_follow', true);
                 break;
@@ -183,10 +184,10 @@ class ProductsController extends AbstractController
         );
 
         $this->setMetadataHelper($allProductsMetadataHelper);
-        
+
         $this->response->setContent('products.tpl');
     }
-    
+
     public function ajaxSearch(ProductsHelper $productsHelper, Image $image, Money $money, Router $router)
     {
 
@@ -225,7 +226,7 @@ class ProductsController extends AbstractController
     public function getFilter(
         FilterHelper   $filterHelper,
         ProductsHelper $productsHelper,
-                       $filtersUrl = ''
+        $filtersUrl = ''
     ) {
         // Если ленивая отложенная загрузка фильтра отключена, этот метод должен давать 404
         if (!$this->settings->get('deferred_load_features')) {

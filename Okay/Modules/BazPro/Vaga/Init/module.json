@@ -1,0 +1,15 @@
+{
+    "modifications": {
+        "front": [
+            {
+                "file" : "product_list.tpl",
+                "changes": [
+                    {
+                        "like": "[ |\"]fn_wishlist[ |\"]",
+                        "appendAfter": "product_vaga_front.tpl"
+                    }
+                ]
+            }
+        ]
+    }
+}
