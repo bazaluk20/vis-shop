@@ -766,6 +766,12 @@
   
 }
 @media only screen and (max-width: 767px) {
+  .hero_card_link {
+    max-height: 140px;
+  }
+  .hero_card_image {
+    height: 90%;
+  }
   .product_sort__form .sorting_icon {
     display: none;
   }
