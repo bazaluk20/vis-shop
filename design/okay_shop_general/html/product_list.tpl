@@ -136,8 +136,8 @@
                     {else}
                         {* Pre-order *}
                         <button
-                            class="product_preview__button product_preview__button--pre_order fn_is_preorder{if $product->variant->stock > 0} hidden-xs-up{/if}"
-                            type="submit" data-language="pre_order">
+                            class="fn_fast_order_button  product_preview__button product_preview__button--pre_order fn_is_preorder{if $product->variant->stock > 0} hidden-xs-up{/if}"
+                            type="button" data-language="fast_order" data-name="{$product->name|escape}">
                             <span class="product_preview__button_text">{$lang->pre_order}</span>
                         </button>
                     {/if}
