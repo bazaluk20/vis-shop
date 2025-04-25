@@ -15,10 +15,10 @@
             right: 0;
             top: 0;
             bottom: 0;
-            padding: 4px;
+            padding: 10px 4px 0;
             font-size: 10px;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
             text-align: center;
             line-height: 0.8;
